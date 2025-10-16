@@ -5,22 +5,27 @@
   --muted:#9aa4b2;
   --accent:#60a5fa;
   --text:#e6eef8;
-}
-html,body,#root{height:100%;}
 body{
   margin:0;
-  font-family:Inter,Segoe UI,Arial,Helvetica,sans-serif;
-  background:linear-gradient(180deg,var(--bg),#071022);
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,var(--bg),#071022);
   color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.6;
 }
-.container{max-width:1100px;margin:32px auto;padding:16px;}
-.home{display:flex;align-items:center;gap:20px}
-.profile-photo{width:10%;height:auto;border-radius:8px;box-shadow:0 6px 18px rgba(2,6,23,.6);}
-.professional-statement{color:var(--muted);max-width:66ch}
-h1{margin:0;font-size:2rem}
-h2{margin-top:24px}
-.challenge, .project{background:var(--card);padding:12px;border-radius:8px;margin-bottom:12px;color:var(--text)}
-@media (max-width:720px){
-  .home{flex-direction:column;text-align:center}
+.container{max-width:1100px;margin:40px auto;padding:24px;}
+.home{display:flex;align-items:flex-start;gap:28px}
+.profile-photo{width:10%;height:auto;border-radius:10px;box-shadow:0 8px 24px rgba(2,6,23,.6);}
+.professional-statement{color:var(--muted);max-width:66ch;margin-top:8px}
+h1{margin:0;font-size:2.25rem;font-weight:700}
+h3{margin:6px 0 10px 0;font-weight:500;color:var(--accent)}
+h2{margin-top:28px;font-size:1.25rem}
+.challenge, .project{background:var(--card);padding:16px;border-radius:10px;margin-bottom:14px;color:var(--text)}
+@media (max-width:920px){
+  .container{padding:16px}
+  .home{flex-direction:column;align-items:center;text-align:center}
+  .profile-photo{width:36%}
+}
   .profile-photo{width:40%}
 }
