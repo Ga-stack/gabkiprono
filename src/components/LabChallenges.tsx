@@ -1,11 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import labChallengesData from '../data/lab-challenges.json';
 
+interface Challenge {
+    problemStatement: string;
+    approach: string;
+    toolsUsed: string[];
+    lessonsLearned: string;
+    screenshots?: string[];
+}
+
 const LabChallenges: React.FC = () => {
-    const [challenges, setChallenges] = useState([]);
+    const [challenges, setChallenges] = useState<Challenge[]>([]);
 
     useEffect(() => {
-        setChallenges(labChallengesData);
+        setChallenges(labChallengesData as Challenge[]);
     }, []);
 
     return (
@@ -17,7 +25,13 @@ const LabChallenges: React.FC = () => {
                     <p><strong>Approach:</strong> {challenge.approach}</p>
                     <p><strong>Tools Used:</strong> {challenge.toolsUsed}</p>
                     <p><strong>Lessons Learned:</strong> {challenge.lessonsLearned}</p>
-                    {challenge.screenshot && <img src={challenge.screenshot} alt={`Screenshot for ${challenge.problemStatement}`} />}
+                    {challenge.screenshots && challenge.screenshots.length > 0 && (
+                        <div className="screenshots">
+                            {challenge.screenshots.map((src, i) => (
+                                <img key={i} src={src} alt={`Screenshot ${i + 1} for ${challenge.problemStatement}`} />
+                            ))}
+                        </div>
+                    )}
                 </div>
             ))}
         </div>
