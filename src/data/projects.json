@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Personal Portfolio Website",
+        "description": "A responsive personal portfolio website to showcase my projects and skills.",
+        "toolsUsed": ["React", "TypeScript", "CSS", "HTML"],
+        "link": "https://github.com/username/personal-portfolio"
+    },
+    {
+        "title": "E-commerce Application",
+        "description": "An e-commerce application built with React and Node.js, featuring user authentication and payment processing.",
+        "toolsUsed": ["React", "Node.js", "Express", "MongoDB"],
+        "link": "https://github.com/username/ecommerce-app"
+    },
+    {
+        "title": "Weather Forecast App",
+        "description": "A weather forecasting application that provides real-time weather updates using a public API.",
+        "toolsUsed": ["React", "Axios", "OpenWeatherMap API"],
+        "link": "https://github.com/username/weather-forecast-app"
+    }
+]
