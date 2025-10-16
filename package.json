@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "A professional portfolio website showcasing projects, resume, lab challenges, and contact information.",
   "main": "src/index.tsx",
+  "homepage": "https://ga-stack.github.io/gkk.github.io",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [
     "portfolio",
@@ -25,5 +28,17 @@
   "devDependencies": {
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
