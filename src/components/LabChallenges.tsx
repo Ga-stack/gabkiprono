@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import labChallengesData from '../data/lab-challenges.json';
+// require the JSON to avoid parser issues with certain TS 'as' assertions in the build toolchain
+const labChallengesData: any = require('../data/lab-challenges.json');
 
 interface Challenge {
     problemStatement: string;
@@ -13,7 +14,7 @@ const LabChallenges: React.FC = () => {
     const [challenges, setChallenges] = useState<Challenge[]>([]);
 
     useEffect(() => {
-        setChallenges(labChallengesData as Challenge[]);
+        setChallenges(labChallengesData);
     }, []);
 
     return (
